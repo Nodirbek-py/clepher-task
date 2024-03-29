@@ -1,6 +1,9 @@
 import React from "react";
+interface ITable {
+  table: any;
+}
 
-const Table: React.FC = ({ table }: { table: any }) => {
+const Table: React.FC<ITable> = ({ table }) => {
   console.log(Object.entries(table));
   return Object.entries(table).map((item: any) => {
     return (
